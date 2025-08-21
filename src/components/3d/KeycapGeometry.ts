@@ -39,7 +39,6 @@ function createRoundedRectShape(width: number, height: number, radius: number, c
 	shape.absarc(x0 + r, y0 + r, r, Math.PI, 1.5 * Math.PI, false)
 
 	shape.autoClose = true
-	shape.curveSegments = curveSegments
 	return shape
 }
 
