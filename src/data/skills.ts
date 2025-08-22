@@ -88,14 +88,6 @@ export const skills: Skill[] = [
     position: { x: -2.5, y: -1, z: 1.5 }
   },
   {
-    id: '10',
-    name: 'Cursor',
-    category: 'tools',
-    proficiency: 90,
-    color: '#00D4FF',
-    position: { x: 2.5, y: 1.5, z: -2 }
-  },
-  {
     id: '11',
     name: 'VS Code',
     category: 'tools',
