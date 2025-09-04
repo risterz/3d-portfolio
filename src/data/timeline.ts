@@ -27,13 +27,26 @@ export const timelineEntries: TimelineEntry[] = [
     featured: true
   },
   {
+    id: '1b',
+    title: 'Sijil Tinggi Pelajaran Malaysia (STPM)',
+    description: 'CGPA: 3.59/4.00, MUET: Band 4',
+    organization: 'Sekolah Menengah Kebangsaan Mengkarak',
+    location: 'Bera, Pahang',
+    startDate: '2020',
+    endDate: '2022',
+    type: 'education',
+    icon: '🏫',
+    color: 'from-slate-500 to-slate-700',
+    featured: false
+  },
+  {
     id: '2',
     title: 'Computer Science Intern',
-    description: 'Seeking internship placement with hands-on project experience. Currently available from 15 September to 14 December 2025.',
+    description: 'Seeking internship placement with hands-on project experience. Currently available from 15 September to 19 December 2025.',
     organization: 'Seeking Opportunities',
     location: 'Malaysia',
     startDate: '2025-09-15',
-    endDate: '2025-12-14',
+    endDate: '2025-12-19',
     type: 'work',
     icon: '💼',
     color: 'from-purple-500 to-pink-500',
@@ -64,6 +77,19 @@ export const timelineEntries: TimelineEntry[] = [
     icon: '🏆',
     color: 'from-yellow-500 to-orange-500',
     featured: true
+  },
+  {
+    id: '6',
+    title: 'Mobile Legends Tournament - UiTM Jasin Campus',
+    description: 'Competitor in campus tournament. Gained teamwork, role-based strategy, and competitive experience.',
+    organization: 'UiTM Student Representative Council (MPP)',
+    location: 'Jasin, Melaka',
+    startDate: '2023-11',
+    endDate: '2023-11',
+    type: 'achievement',
+    icon: '🎮',
+    color: 'from-rose-500 to-pink-500',
+    featured: false
   },
   {
     id: '5',
