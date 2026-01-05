@@ -10,7 +10,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Haris Portfolio',
+  title: 'Haris Profile',
   description: 'Computer Science student showcasing innovative projects through immersive 3D experiences. Built with Next.js, Three.js, and Supabase.',
   keywords: [
     'computer science',
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-    siteName: 'Haris Portfolio',
-    title: 'Haris Portfolio',
+    siteName: 'Haris Profile',
+    title: 'Haris Profile',
     description: 'Computer Science student showcasing innovative projects through immersive 3D experiences.',
     images: [{
       url: '/images/og-image.jpg',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Haris Portfolio',
+    title: 'Haris Profile',
     description: 'Computer Science student showcasing innovative projects through immersive 3D experiences.',
     creator: '@yourusername',
     images: ['/images/og-image.jpg']

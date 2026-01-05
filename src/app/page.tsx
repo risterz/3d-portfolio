@@ -80,7 +80,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
             >
-              <motion.h1 
+              <motion.h1
                 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8"
                 initial={{ scale: 0.5 }}
                 animate={{ scale: 1 }}
@@ -90,7 +90,7 @@ export default function Home() {
                   {personalInfo.name}
                 </span>
               </motion.h1>
-              
+
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -113,7 +113,7 @@ export default function Home() {
                 <div className="h-1 w-32 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full"></div>
               </motion.div>
 
-              <motion.p 
+              <motion.p
                 className="text-lg md:text-xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -128,8 +128,8 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2, duration: 0.8 }}
               >
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   onClick={() => {
                     trackEvent('hero_cta_click', { section: 'projects' })
                     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
@@ -138,9 +138,9 @@ export default function Home() {
                 >
                   <span className="relative z-10">Explore My Work</span>
                 </Button>
-                
-                <Button 
-                  variant="outline" 
+
+                <Button
+                  variant="outline"
                   size="lg"
                   onClick={() => {
                     trackEvent('hero_contact_click', { section: 'contact' })
@@ -158,7 +158,7 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.5, duration: 0.8 }}
               >
-                <a 
+                <a
                   href={`mailto:${personalInfo.email}`}
                   className="flex items-center gap-2 hover:text-cyan-400 transition-colors"
                   onClick={() => trackEvent('hero_email_click')}
@@ -166,7 +166,7 @@ export default function Home() {
                   <Mail size={18} />
                   <span>{personalInfo.email}</span>
                 </a>
-                <a 
+                <a
                   href={personalInfo.github}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -189,7 +189,7 @@ export default function Home() {
           transition={{ delay: 2, duration: 1 }}
         >
           <div className="flex flex-col items-center text-gray-400 cursor-pointer hover:text-cyan-400 transition-colors"
-               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
+            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
             <span className="hidden md:block text-sm mb-2 animate-pulse">Scroll to explore</span>
             <ArrowDown className="w-6 h-6 animate-bounce" />
           </div>
@@ -238,9 +238,8 @@ function Navigation({ currentSection }: { currentSection: number }) {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-800/50' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-800/50' : 'bg-transparent'
+        }`}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
@@ -262,9 +261,8 @@ function Navigation({ currentSection }: { currentSection: number }) {
                   document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' })
                 }}
                 whileHover={{ scale: 1.05 }}
-                className={`transition-colors duration-300 relative ${
-                  currentSection === index ? 'text-cyan-400' : 'text-gray-300 hover:text-white'
-                }`}
+                className={`transition-colors duration-300 relative ${currentSection === index ? 'text-cyan-400' : 'text-gray-300 hover:text-white'
+                  }`}
               >
                 {item.name}
                 {currentSection === index && (
@@ -333,7 +331,7 @@ function ProjectsSection() {
             Explore my latest work showcasing innovative solutions and cutting-edge technologies
           </p>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {featuredProjects.map((project, index) => (
             <motion.div
@@ -345,7 +343,7 @@ function ProjectsSection() {
               <Card variant="glass" className="h-full hover:shadow-2xl hover:shadow-cyan-500/10 overflow-hidden">
                 {/* Project Image */}
                 {project.image && (
-                  <div 
+                  <div
                     className="relative h-48 mb-4 overflow-hidden rounded-lg bg-gray-800 cursor-pointer group"
                     onClick={() => openImageModal(project, 0)}
                   >
@@ -381,29 +379,28 @@ function ProjectsSection() {
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                       <div className="flex gap-2 mb-3">
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        project.status === 'completed' ? 'bg-green-500/20 text-green-300' : 
-                        project.status === 'in-progress' ? 'bg-yellow-500/20 text-yellow-300' :
-                        'bg-blue-500/20 text-blue-300'
-                      }`}>
-                        {project.status === 'completed' ? 'Completed' : 
-                         project.status === 'in-progress' ? 'In Progress' : 'Planned'}
-                      </span>
-                      <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-medium">
-                        {project.category}
-                      </span>
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${project.status === 'completed' ? 'bg-green-500/20 text-green-300' :
+                            project.status === 'in-progress' ? 'bg-yellow-500/20 text-yellow-300' :
+                              'bg-blue-500/20 text-blue-300'
+                          }`}>
+                          {project.status === 'completed' ? 'Completed' :
+                            project.status === 'in-progress' ? 'In Progress' : 'Planned'}
+                        </span>
+                        <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-medium">
+                          {project.category}
+                        </span>
                         <span className="px-2 py-1 bg-gray-500/20 text-gray-300 rounded-full text-xs font-medium">
                           {project.period}
                         </span>
                       </div>
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-300 mb-6 line-clamp-3">{project.description}</p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech) => (
-                      <span 
+                      <span
                         key={tech}
                         className="px-2 py-1 bg-cyan-500/10 text-cyan-300 rounded text-sm border border-cyan-500/20"
                       >
@@ -413,34 +410,34 @@ function ProjectsSection() {
                   </div>
 
                   <div className="flex gap-3 mt-auto">
-                  {project.githubUrl && (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => {
-                        trackEvent('project_github_click', { project: project.title })
-                        window.open(project.githubUrl, '_blank')
-                      }}
-                      className="flex items-center gap-2"
-                    >
-                      <Github size={16} />
-                      Code
-                    </Button>
-                  )}
-                  {project.liveUrl && (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => {
-                        trackEvent('project_demo_click', { project: project.title })
-                        window.open(project.liveUrl, '_blank')
-                      }}
-                      className="flex items-center gap-2"
-                    >
-                      <ExternalLink size={16} />
-                      Demo
-                    </Button>
-                  )}
+                    {project.githubUrl && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => {
+                          trackEvent('project_github_click', { project: project.title })
+                          window.open(project.githubUrl, '_blank')
+                        }}
+                        className="flex items-center gap-2"
+                      >
+                        <Github size={16} />
+                        Code
+                      </Button>
+                    )}
+                    {project.liveUrl && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => {
+                          trackEvent('project_demo_click', { project: project.title })
+                          window.open(project.liveUrl, '_blank')
+                        }}
+                        className="flex items-center gap-2"
+                      >
+                        <ExternalLink size={16} />
+                        Demo
+                      </Button>
+                    )}
                   </div>
                 </div>
               </Card>
@@ -482,7 +479,7 @@ function SkillsSection() {
             Explore my skills through interactive 3D keycaps. <span className="hidden sm:inline">Drag to rotate, scroll to zoom, and hover over keycaps to discover my proficiency levels.</span><span className="sm:hidden">Touch to rotate, pinch to zoom, and tap keycaps for details.</span>
           </p>
         </motion.div>
-        
+
         {/* 3D Skills Constellation */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -512,7 +509,7 @@ function SkillsSection() {
                   <h3 className="text-xl font-semibold text-white mb-2">{category.title}</h3>
                   <p className="text-gray-400 text-sm">{category.description}</p>
                 </div>
-                
+
                 <div className="space-y-3">
                   {category.skills.map((skill, skillIndex) => (
                     <motion.div
@@ -525,7 +522,7 @@ function SkillsSection() {
                       <span className="text-gray-300">{skill.name}</span>
                       <div className="flex items-center gap-2">
                         <div className="w-16 h-2 bg-gray-600 rounded-full overflow-hidden">
-                          <div 
+                          <div
                             className="h-full bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full transition-all duration-1000"
                             style={{ width: `${skill.proficiency}%` }}
                           />
@@ -572,7 +569,7 @@ function TimelineSection() {
           <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px h-full w-px bg-gradient-to-b from-green-500 via-blue-500 to-purple-500" />
 
           {featuredEntries.map((entry, index) => (
-            <TimelineItem 
+            <TimelineItem
               key={entry.id}
               entry={entry}
               index={index}
@@ -614,7 +611,7 @@ function TimelineItem({ entry, index, isEven }: { entry: typeof timelineEntries[
                 </div>
               </div>
             </div>
-            
+
             <span className={`px-2 py-1 md:px-3 md:py-1 rounded-full text-xs font-medium bg-gradient-to-r ${entry.color} text-white self-start md:self-auto`}>
               {entry.type}
             </span>
@@ -649,14 +646,14 @@ function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     trackEvent('contact_form_submit', { name: formData.name })
-    
+
     // Create mailto link
     const subject = `Portfolio Contact from ${formData.name}`
     const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     const mailtoLink = `mailto:${personalInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    
+
     window.location.href = mailtoLink
-    
+
     // Reset form
     setFormData({ name: '', email: '', message: '' })
   }
@@ -676,7 +673,7 @@ function ContactSection() {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Interested in my work or have an internship opportunity? I&apos;d love to hear from you!
+            Interested in my work or have a job opportunity? I&apos;d love to hear from you!
           </p>
         </motion.div>
 
@@ -693,12 +690,12 @@ function ContactSection() {
               <p className="text-gray-300 mb-8">
                 {personalInfo.bio}
               </p>
-              
+
               {/* Availability Notice */}
               <div className="p-4 bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/20 rounded-lg mb-8">
-                <h4 className="text-green-400 font-semibold mb-2">🎯 Available for Internship</h4>
+                <h4 className="text-green-400 font-semibold mb-2">🎯 {personalInfo.availability.status}</h4>
                 <p className="text-gray-300 text-sm">
-                  {personalInfo.availability.internshipStart} to {personalInfo.availability.internshipEnd}
+                  {personalInfo.availability.internshipStart}
                 </p>
               </div>
             </div>
@@ -717,12 +714,12 @@ function ContactSection() {
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                 >
                   <Card variant="glass" className="p-4 hover:bg-white/10 transition-all duration-300 cursor-pointer"
-                        onClick={() => {
-                          if (contact.href !== '#') {
-                            window.open(contact.href, '_blank')
-                            trackEvent('contact_info_click', { type: contact.label.toLowerCase() })
-                          }
-                        }}>
+                    onClick={() => {
+                      if (contact.href !== '#') {
+                        window.open(contact.href, '_blank')
+                        trackEvent('contact_info_click', { type: contact.label.toLowerCase() })
+                      }
+                    }}>
                     <div className="flex items-center gap-4">
                       <div className="p-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg">
                         <contact.icon className="w-5 h-5 text-white" />
@@ -778,7 +775,7 @@ function ContactSection() {
                     value={formData.message}
                     onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
                     className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:border-cyan-400 focus:outline-none transition-colors text-white placeholder-gray-400 resize-none"
-                    placeholder="Tell me about your internship opportunity or project..."
+                    placeholder="Tell me about your job opportunity or project..."
                     required
                   />
                 </div>
@@ -811,8 +808,8 @@ function Footer() {
           </p>
           <div className="flex justify-center space-x-6 mb-8">
             {personalInfo.socialLinks.map((social, index) => {
-              const IconComponent = social.icon === 'github' ? Github : 
-                                  social.icon === 'linkedin' ? Linkedin : Mail
+              const IconComponent = social.icon === 'github' ? Github :
+                social.icon === 'linkedin' ? Linkedin : Mail
               return (
                 <motion.button
                   key={index}

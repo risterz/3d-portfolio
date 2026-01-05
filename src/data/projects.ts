@@ -80,7 +80,7 @@ export const projects: Project[] = [
     longDescription: 'A cutting-edge portfolio website showcasing projects through interactive 3D experiences. Features floating geometries, particle systems, smooth animations, and responsive design. Built with modern web technologies and optimized for performance across all devices.',
     technologies: ['Next.js', 'React Three Fiber', 'Three.js', 'Framer Motion', 'TypeScript', 'Tailwind CSS'],
     githubUrl: 'https://github.com/risterz',
-    liveUrl: 'https://haris-portfolio.vercel.app',
+    liveUrl: 'https://haris-profile.vercel.app',
     category: 'Web',
     status: 'completed',
     featured: true,
