@@ -1,17 +1,17 @@
 export const personalInfo = {
   name: 'Haris Al-Harraz Bin Razali',
   title: 'Full Stack Web Developer',
-  subtitle: 'Final-year Computer Science Student & Future Innovator',
+  subtitle: 'Innovative Full Stack Web Developer & Software Engineer',
   email: 'harisintern@gmail.com',
   phone: '+6019-6185130',
   github: 'https://github.com/risterz',
   linkedin: 'https://www.linkedin.com/in/haris-al-harraz/',
   location: 'Bera, Pahang',
-  
-  bio: 'Final-year Bachelor of Computer Science (Hons.) Netsentric Computing student at UiTM Kampus Jasin, Malacca with a strong foundation in frontend and backend development, digital forensics, and software engineering. Skilled in Python, C++, JavaScript, and database management with hands-on project experience.',
-  
+
+  bio: 'Computer Science graduate from UiTM Kampus Jasin, Malacca with a strong foundation in frontend and backend development, digital forensics, and software engineering. Skilled in Python, C++, JavaScript, and database management with hands-on project experience building scalable web applications.',
+
   objective: 'Passionate Full Stack Web Developer seeking opportunities to create innovative digital experiences. Experienced in building modern, scalable applications using Next.js, React, and Python. Open to full-time positions where I can contribute to impactful projects and continue growing as a software engineer.',
-  
+
   university: {
     name: 'Universiti Teknologi MARA (UiTM)',
     campus: 'Kampus Jasin, Malacca',
@@ -20,13 +20,13 @@ export const personalInfo = {
     cgpa: '3.19',
     period: '2022-Present'
   },
-  
+
   availability: {
     internshipStart: 'Available Immediately',
     internshipEnd: 'Open for Work',
     status: 'Available for Hire'
   },
-  
+
   socialLinks: [
     {
       name: 'GitHub',
