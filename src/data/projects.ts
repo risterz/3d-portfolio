@@ -23,6 +23,7 @@ export const projects: Project[] = [
     longDescription: 'A comprehensive AI creative studio that unlocks the full potential of generative AI. Features include high-speed image generation, intelligent chat with context retention, and professional-grade image upscaling. The interface utilizes a distinct dark neobrutalism design with glassmorphism elements, ensuring a unique and engaging user experience.',
     technologies: ['Python', 'Flask', 'Google Gemini API', 'JavaScript', 'HTML5', 'CSS3', 'Pillow'],
     githubUrl: 'https://github.com/risterz/Gemini-Crack',
+    liveUrl: 'https://gemini-crack.onrender.com',
     category: 'AI Web App',
     status: 'completed',
     featured: true,
