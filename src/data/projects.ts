@@ -17,6 +17,23 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'Gemini-AI',
+    title: 'Gemini Cracker - AI Image Studio',
+    description: '🚀 Powerful AI Studio featuring image generation, upscaling, and chat capabilities. Built with Flask and Google Gemini API, offering a premium neobrutalism UI experience.',
+    longDescription: 'A comprehensive AI creative studio that unlocks the full potential of generative AI. Features include high-speed image generation, intelligent chat with context retention, and professional-grade image upscaling. The interface utilizes a distinct dark neobrutalism design with glassmorphism elements, ensuring a unique and engaging user experience.',
+    technologies: ['Python', 'Flask', 'Google Gemini API', 'JavaScript', 'HTML5', 'CSS3', 'Pillow'],
+    githubUrl: 'https://github.com/risterz/Gemini-Crack',
+    category: 'AI Web App',
+    status: 'completed',
+    featured: true,
+    period: 'Dec 2024',
+    image: '/images/projects/gemini-studio.png', // Placeholder or use generate_image if needed
+    images: [
+      '/images/projects/gemini-studio.png'
+    ],
+    video: ''
+  },
+  {
     id: '1',
     title: 'PantryPal AI - Recipe Enhancement System',
     description: 'A full-stack AI recipe enhancement platform analyzing 1,000+ recipes by extracting ingredients with Spoonacular API and generating personalized suggestions via DeepSeek AI.',

@@ -66,6 +66,19 @@ export const timelineEntries: TimelineEntry[] = [
     featured: true
   },
   {
+    id: 'Gemini-Timeline',
+    title: 'Gemini AI Image Studio',
+    description: 'Developed a full-featured AI web application integrating Google\'s Gemini API for text-to-image generation and advanced chat capabilities.',
+    organization: 'Personal Project',
+    location: 'Remote',
+    startDate: '2024-12',
+    endDate: '2025-01',
+    type: 'project',
+    icon: '✨',
+    color: 'from-fuchsia-500 to-indigo-500',
+    featured: true
+  },
+  {
     id: '4',
     title: 'RAWSEC - UiTM Capture The Flag Hacking Competition',
     description: 'Participated in university-level CTF competition featuring challenges in hacking, digital forensics, cryptography, steganography, reverse engineering, web exploitation, network security and logic-based problem solving.',
