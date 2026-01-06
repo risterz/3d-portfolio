@@ -58,7 +58,7 @@ export default function Home() {
       <Navigation currentSection={currentSection} />
 
       {/* Hero Section */}
-      <section id="hero" className="relative h-screen overflow-hidden bg-gradient-to-b from-gray-900 via-gray-800 to-black">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 via-gray-800 to-black py-20 lg:py-0">
         {/* 3D Background */}
         <div className="absolute inset-0 z-0">
           <Scene>
@@ -81,7 +81,7 @@ export default function Home() {
               transition={{ duration: 1.2, ease: "easeOut" }}
             >
               <motion.h1
-                className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8"
+                className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8"
                 initial={{ scale: 0.5 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
@@ -97,7 +97,7 @@ export default function Home() {
                 transition={{ delay: 0.5, duration: 1 }}
                 className="mb-8"
               >
-                <h2 className="text-2xl md:text-4xl text-gray-300 mb-4 font-light">
+                <h2 className="text-xl sm:text-2xl md:text-4xl text-gray-300 mb-4 font-light px-4">
                   {personalInfo.subtitle}
                 </h2>
                 <div className="flex items-center justify-center gap-6 text-gray-400 mb-6">
@@ -114,7 +114,7 @@ export default function Home() {
               </motion.div>
 
               <motion.p
-                className="text-lg md:text-xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed"
+                className="text-base sm:text-lg md:text-xl text-gray-400 mb-8 md:mb-12 max-w-4xl mx-auto leading-relaxed px-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8, duration: 1 }}
@@ -380,8 +380,8 @@ function ProjectsSection() {
                       <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                       <div className="flex gap-2 mb-3">
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${project.status === 'completed' ? 'bg-green-500/20 text-green-300' :
-                            project.status === 'in-progress' ? 'bg-yellow-500/20 text-yellow-300' :
-                              'bg-blue-500/20 text-blue-300'
+                          project.status === 'in-progress' ? 'bg-yellow-500/20 text-yellow-300' :
+                            'bg-blue-500/20 text-blue-300'
                           }`}>
                           {project.status === 'completed' ? 'Completed' :
                             project.status === 'in-progress' ? 'In Progress' : 'Planned'}
