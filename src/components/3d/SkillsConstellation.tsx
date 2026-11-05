@@ -18,8 +18,19 @@ function getKeycapText(skill: typeof skills[0]) {
     'React.js': 'REACT',
     'Node.js': 'NODE',
     'VS Code': 'VSC',
-    'Bahasa Malaysia': 'BM',
-    'English': 'EN'
+    'WordPress': 'WP',
+    'Elementor': 'ELEM',
+    'Flutter': 'FLUT',
+    'Laravel': 'LAR',
+    'Express.js': 'EXP',
+    'Supabase': 'SUPA',
+    'Netlify': 'NETL',
+    'Vercel': 'VCL',
+    'Kali Linux': 'KALI',
+    'OBS Studio': 'OBS',
+    'Microsoft Office': 'MS365',
+    'Bahasa Malaysia (Native)': 'BM',
+    'English (Professional)': 'EN'
   }
   
   return textMap[skill.name] || skill.name.substring(0, 4).toUpperCase()
@@ -109,8 +120,9 @@ function FloatingKeycap({ skill, onInteraction }: FloatingKeycapProps) {
       
       // Floating animation
       const time = state.clock.elapsedTime
-      const floatY = Math.sin(time * 0.8 + skill.proficiency * 0.1) * 0.3
-      const floatX = Math.cos(time * 0.6 + skill.proficiency * 0.05) * 0.15
+      const baseProficiency = skill.proficiency ?? 80
+      const floatY = Math.sin(time * 0.8 + baseProficiency * 0.1) * 0.3
+      const floatX = Math.cos(time * 0.6 + baseProficiency * 0.05) * 0.15
       
       meshRef.current.position.y = floatY
       meshRef.current.position.x = floatX
@@ -187,26 +199,15 @@ function FloatingKeycap({ skill, onInteraction }: FloatingKeycapProps) {
       
       {/* Hover information */}
       {hovered && (
-        <>
-          <Text
-            position={[0, height/2 + (isMobile ? 0.4 : 0.5), 0]}
-            fontSize={isMobile ? 0.1 : 0.12}
-            color="white"
-            anchorX="center"
-            anchorY="middle"
-          >
-            {skill.name}
-          </Text>
-          <Text
-            position={[0, height/2 + (isMobile ? 0.25 : 0.3), 0]}
-            fontSize={isMobile ? 0.08 : 0.1}
-            color="#aaa"
-            anchorX="center"
-            anchorY="middle"
-          >
-            {skill.proficiency}% proficiency
-          </Text>
-        </>
+        <Text
+          position={[0, height/2 + (isMobile ? 0.35 : 0.45), 0]}
+          fontSize={isMobile ? 0.12 : 0.15}
+          color="white"
+          anchorX="center"
+          anchorY="middle"
+        >
+          {skill.name}
+        </Text>
       )}
     </group>
   )

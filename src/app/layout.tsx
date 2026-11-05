@@ -10,8 +10,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://haris-profile.vercel.app'),
   title: 'Haris Profile',
-  description: 'Computer Science student showcasing innovative projects through immersive 3D experiences. Built with Next.js, Three.js, and Supabase.',
+  description: 'Fresh Computer Science graduate showcasing innovative full-stack web and software engineering projects through immersive 3D experiences. Built with Next.js and Three.js.',
   keywords: [
     'computer science',
     'web development', 
@@ -21,17 +22,18 @@ export const metadata: Metadata = {
     'Three.js',
     'interactive design',
     'full-stack developer',
-    'student portfolio'
+    'fresh graduate portfolio',
+    'software engineer'
   ],
   authors: [{ name: 'Haris' }],
   creator: 'Haris',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://haris-profile.vercel.app',
     siteName: 'Haris Profile',
     title: 'Haris Profile',
-    description: 'Computer Science student showcasing innovative projects through immersive 3D experiences.',
+    description: 'Fresh Computer Science graduate showcasing innovative full-stack and software engineering projects through immersive 3D experiences.',
     images: [{
       url: '/images/og-image.jpg',
       width: 1200,
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Haris Profile',
-    description: 'Computer Science student showcasing innovative projects through immersive 3D experiences.',
+    description: 'Fresh Computer Science graduate showcasing innovative full-stack and software engineering projects through immersive 3D experiences.',
     creator: '@yourusername',
     images: ['/images/og-image.jpg']
   },
@@ -61,7 +63,7 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code',
   },
   alternates: {
-    canonical: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+    canonical: process.env.NEXT_PUBLIC_SITE_URL || 'https://haris-profile.vercel.app',
   }
 }
 

@@ -1,30 +1,30 @@
 export const personalInfo = {
   name: 'Haris Al-Harraz Bin Razali',
   title: 'Full Stack Web Developer',
-  subtitle: 'Innovative Full Stack Web Developer & Software Engineer',
-  email: 'harisintern@gmail.com',
-  phone: '+6019-6185130',
+  subtitle: 'Fresh Graduate • Full Stack Web Developer & Software Engineer',
+  email: 'harisharraz02@gmail.com',
+  phone: '(+60)19-6185130',
   github: 'https://github.com/risterz',
   linkedin: 'https://www.linkedin.com/in/haris-al-harraz/',
-  location: 'Bera, Pahang',
+  location: 'Pahang, Malaysia',
 
-  bio: 'Computer Science graduate from UiTM Kampus Jasin, Malacca with a strong foundation in frontend and backend development, digital forensics, and software engineering. Skilled in Python, C++, JavaScript, and database management with hands-on project experience building scalable web applications.',
+  bio: 'Recent Bachelor of Computer Science (Hons.) graduate in Netcentric Computing from Universiti Teknologi MARA (UiTM), Kampus Jasin, with a CGPA of 3.27. Strong foundation in programming, database management, networking, and software development, with hands-on experience through academic and industry projects. Eager to explore career opportunities in Software Development and Data Centre Operations.',
 
-  objective: 'Passionate Full Stack Web Developer seeking opportunities to create innovative digital experiences. Experienced in building modern, scalable applications using Next.js, React, and Python. Open to full-time positions where I can contribute to impactful projects and continue growing as a software engineer.',
+  objective: 'Recent Computer Science graduate seeking opportunities in Software Development and Data Centre Operations. Experienced in building modern, scalable web applications with Next.js, React, Python, WordPress, and cloud platforms. Ready to contribute practical industry experience and strong technical problem-solving skills.',
 
   university: {
     name: 'Universiti Teknologi MARA (UiTM)',
-    campus: 'Kampus Jasin, Malacca',
-    degree: 'Bachelor of Computer Science (Hons.) Netsentric Computing',
-    gpa: '3.45',
-    cgpa: '3.19',
-    period: '2022-Present'
+    campus: 'Kampus Jasin, Melaka',
+    degree: 'Bachelor of Computer Science (Hons.) Netcentric Computing',
+    gpa: '3.67',
+    cgpa: '3.27',
+    period: '2022 - 2025'
   },
 
   availability: {
     internshipStart: 'Available Immediately',
-    internshipEnd: 'Open for Work',
-    status: 'Available for Hire'
+    internshipEnd: 'Open for Opportunities',
+    status: 'Fresh Graduate • Open for Opportunities'
   },
 
   socialLinks: [
@@ -35,12 +35,12 @@ export const personalInfo = {
     },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/haris-alharraz',
+      url: 'https://www.linkedin.com/in/haris-al-harraz/',
       icon: 'linkedin'
     },
     {
       name: 'Email',
-      url: 'mailto:harisintern@gmail.com',
+      url: 'mailto:harisharraz02@gmail.com',
       icon: 'mail'
     }
   ]

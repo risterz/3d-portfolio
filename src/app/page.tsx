@@ -476,7 +476,7 @@ function SkillsSection() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore my skills through interactive 3D keycaps. <span className="hidden sm:inline">Drag to rotate, scroll to zoom, and hover over keycaps to discover my proficiency levels.</span><span className="sm:hidden">Touch to rotate, pinch to zoom, and tap keycaps for details.</span>
+            Explore my skills through interactive 3D keycaps. <span className="hidden sm:inline">Drag to rotate, scroll to zoom, and hover over keycaps to view technologies.</span><span className="sm:hidden">Touch to rotate, pinch to zoom, and tap keycaps for details.</span>
           </p>
         </motion.div>
 
@@ -495,7 +495,7 @@ function SkillsSection() {
         </motion.div>
 
         {/* Skill Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
@@ -517,18 +517,9 @@ function SkillsSection() {
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: (index * 0.1) + (skillIndex * 0.05), duration: 0.4 }}
-                      className="flex items-center justify-between p-3 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-colors"
+                      className="flex items-center p-3 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-colors"
                     >
                       <span className="text-gray-300">{skill.name}</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-16 h-2 bg-gray-600 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full transition-all duration-1000"
-                            style={{ width: `${skill.proficiency}%` }}
-                          />
-                        </div>
-                        <span className="text-xs text-gray-400 w-8">{skill.proficiency}%</span>
-                      </div>
                     </motion.div>
                   ))}
                 </div>
@@ -560,7 +551,7 @@ function TimelineSection() {
             </span>
           </h2>
           <p className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto px-2">
-            From student to developer - explore the milestones that shaped my path in computer science
+            From university to industry - explore the milestones that shaped my path in computer science
           </p>
         </motion.div>
 
