@@ -1,0 +1,88 @@
+/* ==========================================================================
+   93GRADOS-INSPIRED THREE-LAYER DESIGN SYSTEM TOKENS
+   Primitive -> Semantic -> Component
+   ========================================================================== */
+
+/* LAYER 1: PRIMITIVES */
+:root {
+  --raw-black: #000000;
+  --raw-ink-950: #1d1d1b;
+  --raw-ink-950-a63: rgba(29, 29, 27, 0.68);
+  --raw-ink-950-a88: rgba(29, 29, 27, 0.88);
+  --raw-gray-500: #868686;
+  --raw-gray-200: #dfdfdf;
+  --raw-white: #ffffff;
+  --raw-white-a30: rgba(255, 255, 255, 0.302);
+  --raw-white-a15: rgba(255, 255, 255, 0.15);
+
+  --raw-crimson-300: #fd2a42;
+  --raw-crimson-400: #d52a42;
+  --raw-crimson-500: #d32941;
+  --raw-crimson-500-a60: rgba(211, 41, 65, 0.6);
+  --raw-crimson-900-a0: rgba(111, 22, 34, 0);
+
+  --raw-chaos-mouse: #00ffdb;
+  --raw-chaos-cyan: #00faf0;
+  --raw-chaos-magenta: #fa00d0;
+
+  --raw-font-display: 'Clash Display', sans-serif;
+  --raw-font-editorial: var(--font-jakarta), 'Helvetica Neue', Arial, sans-serif;
+
+  --radius-none: 0px;
+  --radius-sm: 12px;
+  --radius-md: 15px;
+  --radius-lg: 28px;
+  --radius-xl: 30px;
+  --radius-pill: 48px;
+  --radius-full: 50%;
+
+  --ease-quart-out: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-quad-in: cubic-bezier(0.47, 0, 0.75, 0.72);
+  --ease-quad-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  --glow-crimson-sm: 0 0 12px var(--raw-crimson-500-a60);
+
+  --z-webgl: 1;
+  --z-backdrop: 2;
+  --z-content: 5;
+  --z-broken-overlay: 10;
+  --z-header: 98;
+  --z-footer: 99;
+  --z-cursor: 100;
+  --z-modal: 200;
+  --z-loader: 9999;
+}
+
+/* LAYER 2: SEMANTICS */
+:root {
+  --surface-canvas: var(--raw-ink-950);
+  --surface-drawer: var(--raw-ink-950-a63);
+  --surface-elevated: var(--raw-ink-950-a88);
+  --surface-inverted: var(--raw-white);
+  --surface-accent: var(--raw-crimson-500);
+
+  --ink-primary: var(--raw-white);
+  --ink-muted: var(--raw-gray-500);
+  --ink-accent: var(--raw-crimson-500);
+  --ink-on-inverted: var(--raw-ink-950);
+  --ink-on-accent: var(--raw-white);
+
+  --border-hairline: 1px solid var(--raw-white);
+  --border-subtle: 1px solid var(--raw-white-a30);
+  --border-accent: 1px solid var(--raw-crimson-500);
+
+  --font-ui: var(--raw-font-display);
+  --font-heading: var(--raw-font-display);
+  --font-body: var(--raw-font-display);
+  --font-list: var(--raw-font-editorial);
+}
+
+/* LAYER 3: COMPONENTS */
+:root {
+  --pill-height: 24px;
+  --pill-radius: var(--radius-pill);
+  --cta-height: 36px;
+  --cursor-size-sm: 30px;
+  --cursor-size-lg: 80px;
+  --media-radius: var(--radius-xl);
+}

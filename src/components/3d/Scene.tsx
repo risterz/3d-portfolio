@@ -6,49 +6,36 @@ import { Suspense } from 'react'
 interface SceneProps {
   children: React.ReactNode
   className?: string
-  enableControls?: boolean
   cameraPosition?: [number, number, number]
   cameraFov?: number
 }
 
-export default function Scene({ 
-  children, 
-  className = "w-full h-full", 
-  enableControls = false,
-  cameraPosition = [0, 0, 5],
-  cameraFov = 75
+export default function Scene({
+  children,
+  className = 'w-full h-full',
+  cameraPosition = [0, 0, 5.5],
+  cameraFov = 65,
 }: SceneProps) {
   return (
     <div className={className}>
       <Canvas
-        camera={{ 
-          position: cameraPosition, 
-          fov: cameraFov 
+        camera={{
+          position: cameraPosition,
+          fov: cameraFov,
         }}
-        gl={{ 
-          antialias: true, 
+        gl={{
+          antialias: true,
           alpha: true,
-          powerPreference: "high-performance"
+          powerPreference: 'high-performance',
         }}
         dpr={[1, 2]}
       >
         <Suspense fallback={null}>
-          <ambientLight intensity={0.4} />
-          <directionalLight 
-            position={[10, 10, 5]} 
-            intensity={1} 
-          />
-          <pointLight position={[-10, -10, -10]} intensity={0.5} color="#00ffff" />
-          <pointLight position={[10, 10, 10]} intensity={0.5} color="#8b5cf6" />
-          
+          <ambientLight intensity={0.45} />
+          <directionalLight position={[10, 10, 6]} intensity={1.2} color="#ffffff" />
+          <pointLight position={[-8, -6, 6]} intensity={1.4} color="#d32941" />
+          <pointLight position={[8, 6, -6]} intensity={0.8} color="#ffffff" />
           {children}
-          
-          {enableControls && (
-            <mesh>
-              <boxGeometry args={[0.1, 0.1, 0.1]} />
-              <meshBasicMaterial transparent opacity={0} />
-            </mesh>
-          )}
         </Suspense>
       </Canvas>
     </div>

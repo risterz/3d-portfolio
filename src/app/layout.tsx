@@ -1,108 +1,85 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
 import './globals.css'
 
-const inter = Inter({ 
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
-  variable: '--font-inter'
+  variable: '--font-jakarta',
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://haris-profile.vercel.app'),
-  title: 'Haris Profile',
-  description: 'Fresh Computer Science graduate showcasing innovative full-stack web and software engineering projects through immersive 3D experiences. Built with Next.js and Three.js.',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://haris-portfolio.pages.dev'),
+  title: 'HARIS AL-HARRAZ // 02 | DESIGN & DEVELOP',
+  description:
+    'Full Stack Web Developer & Software Engineer crafting interactive 3D web experiences, Rust desktop tools, AI platforms, and scalable applications.',
   keywords: [
-    'computer science',
-    'web development', 
-    '3D portfolio',
-    'React',
+    'Haris Al-Harraz',
+    'Full Stack Developer',
+    'Software Engineer',
+    '3D Portfolio',
     'Next.js',
     'Three.js',
-    'interactive design',
-    'full-stack developer',
-    'fresh graduate portfolio',
-    'software engineer'
+    'React',
+    'Tauri',
+    'Rust',
+    'Malaysia Developer',
   ],
-  authors: [{ name: 'Haris' }],
-  creator: 'Haris',
+  authors: [{ name: 'Haris Al-Harraz Bin Razali' }],
+  creator: 'Haris Al-Harraz Bin Razali',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://haris-profile.vercel.app',
-    siteName: 'Haris Profile',
-    title: 'Haris Profile',
-    description: 'Fresh Computer Science graduate showcasing innovative full-stack and software engineering projects through immersive 3D experiences.',
-    images: [{
-      url: '/images/og-image.jpg',
-      width: 1200,
-      height: 630,
-      alt: '3D Interactive Portfolio Preview'
-    }]
+    siteName: 'HRZ // 02',
+    title: 'HARIS AL-HARRAZ // 02 | DESIGN & DEVELOP',
+    description:
+      'Full Stack Web Developer & Software Engineer building interactive 3D web experiences, desktop tools, and scalable software.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Haris Profile',
-    description: 'Fresh Computer Science graduate showcasing innovative full-stack and software engineering projects through immersive 3D experiences.',
-    creator: '@yourusername',
-    images: ['/images/og-image.jpg']
+    title: 'HARIS AL-HARRAZ // 02 | DESIGN & DEVELOP',
+    description:
+      'Full Stack Web Developer & Software Engineer building interactive 3D web experiences, desktop tools, and scalable software.',
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
-  verification: {
-    google: 'your-google-verification-code',
-  },
-  alternates: {
-    canonical: process.env.NEXT_PUBLIC_SITE_URL || 'https://haris-profile.vercel.app',
-  }
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={plusJakarta.variable}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#000000" />
+        <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://api.fontshare.com/v2/css?f[]=clash-display@300,400,500,600,700&display=swap"
+        />
+        <meta name="theme-color" content="#1d1d1b" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className="antialiased selection:bg-[#d32941] selection:text-white">
         {children}
         <Toaster
-          position="bottom-right"
+          position="top-right"
           toastOptions={{
-            duration: 4000,
+            duration: 3500,
             style: {
-              background: '#1f2937',
+              background: '#1d1d1b',
               color: '#ffffff',
-              border: '1px solid #374151',
+              border: '1px solid #ffffff',
+              borderRadius: '0px',
+              fontFamily: 'Clash Display, sans-serif',
+              fontSize: '12px',
+              letterSpacing: '1.5px',
+              textTransform: 'uppercase',
             },
             success: {
               iconTheme: {
-                primary: '#10b981',
-                secondary: '#ffffff',
-              },
-            },
-            error: {
-              iconTheme: {
-                primary: '#ef4444',
+                primary: '#d32941',
                 secondary: '#ffffff',
               },
             },
