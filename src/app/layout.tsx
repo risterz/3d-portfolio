@@ -1,14 +1,6 @@
 import type { Metadata } from 'next'
-import { Plus_Jakarta_Sans } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
 import './globals.css'
-
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  display: 'swap',
-  variable: '--font-jakarta',
-})
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://haris-profile.vercel.app'
 
@@ -138,12 +130,18 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={plusJakarta.variable}>
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
           href="https://api.fontshare.com/v2/css?f[]=clash-display@300,400,500,600,700&display=swap"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
         />
         <meta name="theme-color" content="#1d1d1b" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />

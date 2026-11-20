@@ -25,6 +25,7 @@
   --raw-chaos-cyan: #00faf0;
   --raw-chaos-magenta: #fa00d0;
 
+  --font-jakarta: 'Plus Jakarta Sans';
   --raw-font-display: 'Clash Display', sans-serif;
   --raw-font-editorial: var(--font-jakarta), 'Helvetica Neue', Arial, sans-serif;
 
