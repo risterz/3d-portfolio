@@ -39,12 +39,12 @@ export default function FooterHUD() {
   return (
     <footer
       aria-label="Global controls and credits"
-      className={`fixed bottom-5 right-5 md:bottom-0 md:left-0 md:right-0 flex flex-col-reverse md:flex-row md:items-center gap-3 md:gap-0 px-5 py-5 md:px-5 md:py-2.5 xl:px-9 xl:py-5 rounded-[15px] md:rounded-none border-none md:border-t md:border-white transition-all duration-500 ${
+      className={`fixed bottom-4 right-3 md:bottom-0 md:left-0 md:right-0 w-max max-w-[calc(100vw-52px)] md:w-auto md:max-w-none flex flex-col-reverse md:flex-row md:items-center gap-3 md:gap-0 px-3 py-3.5 md:px-5 md:py-2.5 xl:px-9 xl:py-5 rounded-[15px] md:rounded-none border border-white/15 md:border-0 md:border-t md:border-white transition-all duration-500 ${
         entered ? 'opacity-100' : 'opacity-0 pointer-events-none'
       } ${
         mobileOpen
           ? 'translate-x-0'
-          : 'translate-x-[calc(100%+10px)] md:translate-x-0'
+          : 'translate-x-[calc(100%+12px)] md:translate-x-0'
       }`}
       style={{
         zIndex: 'var(--z-footer)',
@@ -59,7 +59,7 @@ export default function FooterHUD() {
         onClick={() => setMobileOpen((prev) => !prev)}
         aria-label={mobileOpen ? 'Close controls drawer' : 'Open controls drawer'}
         aria-expanded={mobileOpen}
-        className="md:hidden absolute -left-2.5 top-5 -translate-x-1/2 -translate-y-1/2 w-6 h-9 rounded-xl bg-[#1d1d1b] border border-white/50 flex items-center justify-center text-white"
+        className="md:hidden absolute right-full top-1/2 -translate-y-1/2 w-8 h-11 rounded-l-xl bg-[#1d1d1b]/95 border border-r-0 border-white/50 flex items-center justify-center text-white shadow-lg"
       >
         <svg
           width="7"
@@ -120,7 +120,7 @@ export default function FooterHUD() {
       </div>
 
       {/* Controls Row: DON'T TOUCH + 93° Chaos Slider */}
-      <div className="flex items-center gap-3 xl:gap-6">
+      <div className="flex flex-wrap md:flex-nowrap items-center gap-2 sm:gap-3 xl:gap-6">
         <button
           type="button"
           onClick={toggleBroken}
@@ -128,18 +128,18 @@ export default function FooterHUD() {
           data-active={broken === true ? 'true' : 'false'}
           onMouseEnter={() => setCursor({ big: true, text: broken ? 'FIX' : 'CHAOS' })}
           onMouseLeave={resetCursor}
-          className="hud-pill"
+          className="hud-pill !px-3 md:!px-[18px] xl:!px-5 shrink-0"
         >
           {broken ? 'RESTORE' : "DON'T TOUCH"}
         </button>
 
         {/* Accessible 0%–100% Flux / Stability Slider */}
         <div
-          className="relative h-6 w-[158px] border border-white rounded-[48px] flex items-center justify-between px-3"
+          className="relative h-6 w-[126px] sm:w-[158px] border border-white rounded-[48px] flex items-center justify-between px-2.5 sm:px-3 shrink-0"
           onMouseEnter={() => setCursor({ big: true, text: 'FLUX' })}
           onMouseLeave={resetCursor}
         >
-          <div className="relative w-[82px] h-[14px] flex items-center">
+          <div className="relative w-[68px] sm:w-[82px] h-[14px] flex items-center">
             {/* Graduated 10-bar SVG masked by current flux */}
             <svg
               width="82"
@@ -147,6 +147,7 @@ export default function FooterHUD() {
               viewBox="0 0 83 15"
               fill="none"
               aria-hidden="true"
+              className="w-full h-full"
               style={{
                 maskImage: `linear-gradient(to right, black ${sliderRatio}%, rgba(0,0,0,0.18) ${sliderRatio}%)`,
                 WebkitMaskImage: `linear-gradient(to right, black ${sliderRatio}%, rgba(0,0,0,0.18) ${sliderRatio}%)`,
