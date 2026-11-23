@@ -17,6 +17,26 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'cosmic-odyssey',
+    title: 'Cosmic Odyssey — 3D Space Exploration',
+    description:
+      'Cinematic, scroll-driven 3D space voyage built with React 19, TypeScript, Three.js, GSAP ScrollTrigger, Lenis smooth scroll, and synthesized Web Audio soundscapes.',
+    longDescription:
+      'Five-chapter interactive deep-space experience pairing custom Three.js GLSL planetary atmospheres, Whirlpool Galaxy parallax, four selectable 3D worlds with astronomical archives, NASA untethered spacewalk storytelling, guided autopilot, and optional Web Audio ambient sound.',
+    technologies: ['React 19', 'TypeScript', 'Three.js', 'GSAP', 'Lenis', 'Web Audio API', 'Vite'],
+    githubUrl: 'https://github.com/risterz/cosmic-odyssey',
+    liveUrl: 'https://cosmic-odyssey.pages.dev',
+    category: '3D & WebGL',
+    status: 'completed',
+    featured: true,
+    period: 'Nov 2026',
+    image: '/images/projects/cosmic-odyssey-hero.png',
+    images: [
+      '/images/projects/cosmic-odyssey-hero.png',
+      '/images/projects/cosmic-odyssey-weightless.png',
+    ],
+  },
+  {
     id: 'brawl-arena',
     title: 'Brawl Arena — 3D 3v3 Multiplayer Brawler',
     description:
