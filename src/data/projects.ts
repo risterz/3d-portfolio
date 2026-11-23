@@ -17,6 +17,26 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'brawl-arena',
+    title: 'Brawl Arena — 3D 3v3 Multiplayer Brawler',
+    description:
+      'Fast-paced 3D 3v3 real-time multiplayer browser brawler built with Three.js, TypeScript workspaces, 7 custom-rigged GLB brawlers, A* bot AI, and Cloudflare Durable Objects.',
+    longDescription:
+      'Full-stack 3D arena brawler combining Three.js skeletal animation and stylized emissive shaders with an authoritative Cloudflare Workers + SQLite Durable Objects WebSocket backend. Includes 7 playable brawlers, Gem Grab and Brawl Ball modes across 3 symmetric destructible arenas, offline A* bot play, and adaptive PC/mobile twin-stick controls.',
+    technologies: ['TypeScript', 'Three.js', 'Cloudflare Workers', 'Durable Objects', 'WebSockets', 'Vite'],
+    githubUrl: 'https://github.com/risterz/brawl-arena',
+    liveUrl: 'https://brawl-arena.harisharraz02.workers.dev',
+    category: '3D & WebGL',
+    status: 'completed',
+    featured: true,
+    period: 'Nov 2026',
+    image: '/images/projects/brawl-arena-lobby.png',
+    images: [
+      '/images/projects/brawl-arena-lobby.png',
+      '/images/projects/brawl-arena-match.png',
+    ],
+  },
+  {
     id: 'haris-3d-world',
     title: 'Haris 3D World — Interactive Driving Portfolio',
     description:
