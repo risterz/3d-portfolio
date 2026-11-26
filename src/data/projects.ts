@@ -17,6 +17,26 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'vela-atelier',
+    title: 'VELA — Donut V Architectural Showcase',
+    description:
+      'Zero-framework luxury patisserie showcase built with vanilla ES modules, real-time WebGL1 fluid sprinkle reveal, 12-dot SDF blooming mark, parametric 3D SVG CAD wireframes, and Lenis 6-act choreography.',
+    longDescription:
+      'Museum-grade interactive showcase pairing a 3-pass 256×256 WebGL1 ping-pong fluid shader (refracting and revealing 280 cascading 3D sprinkles), custom SDF metaball preloader, parametric 3D torus CAD drafting, interactive split-horizon glaze studio with depth-only holdout occlusion, and a 25-plate headless Three.js PBR studio pipeline — all in ~27 KB gzipped.',
+    technologies: ['WebGL1 GLSL', 'Three.js', 'Lenis', 'Vite 6', 'SVG CAD', 'Playwright', 'Cloudflare Pages'],
+    githubUrl: 'https://github.com/risterz/vela-atelier',
+    liveUrl: 'https://vela-atelier.pages.dev',
+    category: '3D & WebGL',
+    status: 'completed',
+    featured: true,
+    period: 'Nov 2026',
+    image: '/images/projects/vela-atelier-hero.png',
+    images: [
+      '/images/projects/vela-atelier-hero.png',
+      '/images/projects/vela-atelier-studio.png',
+    ],
+  },
+  {
     id: 'cosmic-odyssey',
     title: 'Cosmic Odyssey — 3D Space Exploration',
     description:

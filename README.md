@@ -2,7 +2,7 @@
 
 # HRZ // 02 — 3D Interactive Portfolio
 
-### *Editorial brutality meets real-time WebGL: 5 morphing GPU particle worlds, Lenis + GSAP parallax, an interactive 3D mechanical keycap lab, and 23 shipped projects.*
+### *Editorial brutality meets real-time WebGL: 5 morphing GPU particle worlds, Lenis + GSAP parallax, an interactive 3D mechanical keycap lab, and 24 shipped projects.*
 
 [![Next.js](https://img.shields.io/badge/Next.js-14-1d1d1b?style=flat-square&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![React Three Fiber](https://img.shields.io/badge/Three.js-R3F-d32941?style=flat-square&logo=threedotjs&logoColor=white)](https://docs.pmnd.rs/react-three-fiber)
@@ -50,18 +50,18 @@ All particle physics run on the GPU via custom GLSL simplex-flow vertex & fragme
 
 ### 3. Editorial Parallax & Interactive Labs
 - **Stair-Down Portal Cards:** Desktop left-to-right staggered parallax portals (`WORK`, `SKILLS`, `ABOUT`) paired with uniform equal-gap stacking on mobile via `gsap.matchMedia()`.
-- **23 Shipped GitHub Projects:** Filterable showcase (`ALL`, `3D & WEBGL`, `WEB & EDITORIAL`, `TOOLS & AI`, `SYSTEMS & GAMES`) with GSAP image Y-parallax, pointer micro-tilt, gradient-clip text reveals, per-project particle color tinting, and a sharp-framed keyboard-navigable lightbox modal.
+- **24 Shipped GitHub Projects:** Filterable showcase (`ALL`, `3D & WEBGL`, `WEB & EDITORIAL`, `TOOLS & AI`, `SYSTEMS & GAMES`) with GSAP image Y-parallax, pointer micro-tilt, gradient-clip text reveals, per-project particle color tinting, and a sharp-framed keyboard-navigable lightbox modal.
 - **3D Mechanical Keycap Constellation:** Orbit, zoom, and hover custom procedural 3D keycaps representing core technologies (`SkillsConstellation.tsx`).
 - **Draggable Studio Stamp & Scroll Skew:** Physics-smoothed `.rotable` velocity skew (amplified by the Flux slider) and a bounded `GSAP Draggable` `HRZ.02` stamp.
 - **Direct Gmail Delivery:** Serverless contact form powered by Web3Forms with spam honeypot, loading/error states, and one-click clipboard email copy.
 
 ---
 
-## Featured Projects Directory (23 Shipped)
+## Featured Projects Directory (24 Shipped)
 
 | Category | Projects |
 | :--- | :--- |
-| **3D & WebGL** | [Cosmic Odyssey](https://cosmic-odyssey.pages.dev) · [Brawl Arena](https://brawl-arena.harisharraz02.workers.dev) · [Haris 3D World](https://haris-3d-world.pages.dev) · [DONUTVERSE](https://donutverse.pages.dev) · [RoomForge 3D](https://roomforge-3d.pages.dev) · [KeyThock 3D](https://keythock.pages.dev) · [HIV Molecular Lab 3D](https://hiv-molecular-lab-3d.pages.dev) · [HIV Atlas](https://hiv-atlas.pages.dev) · [COSMOS Explorer](https://cosmos-explorer-prz.pages.dev) |
+| **3D & WebGL** | [VELA — Donut V](https://vela-atelier.pages.dev) · [Cosmic Odyssey](https://cosmic-odyssey.pages.dev) · [Brawl Arena](https://brawl-arena.harisharraz02.workers.dev) · [Haris 3D World](https://haris-3d-world.pages.dev) · [DONUTVERSE](https://donutverse.pages.dev) · [RoomForge 3D](https://roomforge-3d.pages.dev) · [KeyThock 3D](https://keythock.pages.dev) · [HIV Molecular Lab 3D](https://hiv-molecular-lab-3d.pages.dev) · [HIV Atlas](https://hiv-atlas.pages.dev) · [COSMOS Explorer](https://cosmos-explorer-prz.pages.dev) |
 | **Web & Editorial** | [Ember & Olive](https://ember-olive-6v6.pages.dev) · [NEOMARKET](https://neomarket-1v5.pages.dev) · [Windows 98 Web OS](https://windows98-emulator.pages.dev) · [KAFA Sirah](https://kafa-sirah.vercel.app) |
 | **Tools & AI** | [SonicShift (FFmpeg.wasm)](https://sonicshift-mp3.pages.dev) · [Papercraft PDF](https://papercraft-pdf.pages.dev) · [PantryPal AI](https://pantrypal-ai-nine.vercel.app) · [Gemini Web UI](https://gemini-crack.onrender.com) |
 | **Systems & Games** | [FreeFetch (Rust/Tauri)](https://github.com/risterz/FreeFetch) · [Shuffle Puzzle (CF D1)](https://shuffle-puzzle.harisharraz02.workers.dev/) · [UNO Online](https://uno-card-game-335.pages.dev) · [PixelVault](https://pixelvault-30v.pages.dev) · [StegoBox](https://github.com/risterz/StegoBox) · [VidHarvester](https://github.com/risterz/VidHarvester) |
@@ -101,7 +101,7 @@ src/
 │       └── ImageModal.tsx       # Keyboard-accessible brutalist screenshot gallery
 └── data/
     ├── personal.ts              # Bio, education, contact & availability
-    ├── projects.ts              # 23 curated projects + verified screenshots
+    ├── projects.ts              # 24 curated projects + verified screenshots
     ├── skills.ts                # 25 skills + 3D keycap coordinates
     └── timeline.ts              # Experience, education & competition milestones
 ```
